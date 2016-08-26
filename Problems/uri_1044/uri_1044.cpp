@@ -1,0 +1,1 @@
+#include <iostream>#include <cstdio>using namespace std;int main() {	int a, b, is;	while (scanf("%d %d", &a, &b) == 2) {		if (a < b) {			is = a;			a = b;			b = is;		}		is = a%b == 0;		printf("%s\n", is ? "Sao Multiplos" : "Nao sao Multiplos");	}	return 0;}
