@@ -20,8 +20,8 @@ done
 mkdir $name
 echo -e $main_content >> ./$name/$name.$file_ext
 
-touch ./$name/$name.in
-touch ./$name/$name.out
+touch ./$name/$name.in.txt
+touch ./$name/$name.out.txt
 touch ./$name/result.txt
 touch ./$name/notes.txt
 
