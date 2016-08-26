@@ -2,7 +2,7 @@
 
 name=$1
 compile_command="g++ -o $name $name.cpp -std=c++11 -lm -O2"
-main_content="#include <iostream>\r\rusing namespace std;\r\rint main() {\r\treturn 0;\r}\r"
+main_content="#include <iostream>\r#include <cstdio>\r\rusing namespace std;\r\rint main() {\r\treturn 0;\r}\r"
 file_ext="cpp"
 while test $# -gt 0
 do
