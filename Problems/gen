@@ -27,10 +27,10 @@ touch ./$name/notes.txt
 
 touch ./$name/makefile
 echo -e "$compile_command
-./$name < $name.in > result.txt
-diff -c result.txt $name.out
+./$name < $name.in.txt > result.txt
+diff -c result.txt $name.out.txt
 " >> ./$name/makefile
 
 touch ./$name/run
 echo -e "$compile_command
-./$name < $name.in" >> ./$name/run
+./$name < $name.in.txt" >> ./$name/run
