@@ -1,0 +1,1 @@
+#include <iostream>#include <cstdio>using namespace std;int main() {	int h1, m1, h2, m2;	int t1, t2, r, rm;	while (scanf("%d %d %d %d", &h1, &m1, &h2, &m2) == 4) {		t1 = h1 * 60 + m1;		t2 = h2 * 60 + m2;		r = t2 - t1;		if (r < 1) {			r += 24 * 60;		}		rm = r%60;		r /= 60;		printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n", r, rm);	}	return 0;}
