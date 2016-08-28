@@ -1,14 +1,17 @@
 #!/bin/bash
 
 name=$1
+nl="\r"
 compile_command="g++ -o $name $name.cpp -std=c++11 -lm -O2"
-main_content="#include <iostream>\r#include <cstdio>\r\rusing namespace std;\r\rint main() {\r\treturn 0;\r}\r"
+c_content="#include <stdio.h>$nl$nl""int main() {$nl\treturn 0;$nl}$nl"
+cpp_content="#include <iostream>$nl$nl""using namespace std;$nl$nl""int main() {$nl\treturn 0;$nl}$nl"
+main_content=$cpp_content
 file_ext="cpp"
 while test $# -gt 0
 do
     case "$1" in
         -c) compile_command="gcc -o $name $name.c -lm -O2"
-             main_content="#include <stdio.h>\r\rint main() {\r\treturn 0;\r}\r"
+             main_content=$c_content
              file_ext="c"
             ;;
         *)
@@ -20,17 +23,17 @@ done
 mkdir $name
 echo -e $main_content >> ./$name/$name.$file_ext
 
-touch ./$name/$name.in.txt
-touch ./$name/$name.out.txt
+touch ./$name/$name.in
+touch ./$name/$name.out
 touch ./$name/result.txt
 touch ./$name/notes.txt
 
 touch ./$name/makefile
 echo -e "$compile_command
-./$name < $name.in.txt > result.txt
-diff -c result.txt $name.out.txt
+./$name < $name.in > result.txt
+diff -c result.txt $name.out
 " >> ./$name/makefile
 
 touch ./$name/run
 echo -e "$compile_command
-./$name < $name.in.txt" >> ./$name/run
+./$name < $name.in" >> ./$name/run
