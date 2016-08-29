@@ -1,0 +1,1 @@
+#include <iostream>using namespace std;#define N 5int main() {	int p = 0, i;	int n;	for (i = 0; i < N; i++) {		if (scanf("%d", &n) == 1 && !(n%2)) {			p++;		}	}	printf("%d valores pares\n", p);	return 0;}

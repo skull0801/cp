@@ -1,0 +1,1 @@
+#include <iostream>using namespace std;#define N 6#define EPS 1.0E-9int lessT(double a, double b) {	return (a - b) < EPS;}int main() {	int p = 0, i;	double n;	double sum = 0;	for (i = 0; i < N; i++) {		if (scanf("%lf", &n) == 1 && lessT(0, n)) {			p++;			sum += n;		}	}	printf("%d valores positivos\n", p);	printf("%.1lf\n", sum/((double) p));	return 0;}
