@@ -1,0 +1,1 @@
+#include <iostream>#include <cmath>using namespace std;#define EPS 1.0E-2int eq(double a, double b) {	return fabs(a - b) < EPS;}int lessOrEq(double a, double b) {	return (a - b) < EPS || eq(a, b);}int main() {	double i, j;	for (i = 0; lessOrEq(i, 2.0); i+=0.2) {		for (j = 1.0; lessOrEq(j, 3.0); j++) {			printf("I=%lg J=%lg\n", i, j + i);		}	}	return 0;}

@@ -1,0 +1,1 @@
+#include <iostream>using namespace std;int main() {	int i, j, k;	for (i = 1, k = 7; i <= 9; i += 2, k += 2) {		for (j = k; j >= k - 2; j--) {			printf("I=%d J=%d\n", i, j);		}	}	return 0;}
