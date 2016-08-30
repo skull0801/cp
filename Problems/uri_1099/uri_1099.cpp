@@ -1,0 +1,1 @@
+#include <iostream>#include <algorithm>using namespace std;int main() {	int t, x, y, sum, i;	while (cin >> t) {		while (t-- && cin >> x >> y) {			if (x > y) {				swap(x, y);			}			x = x%2 ? x + 2 : x + 1;			sum = 0;			for (i = x; i < y; i += 2) {				sum += i;			}			printf("%d\n", sum);		}	}	return 0;}

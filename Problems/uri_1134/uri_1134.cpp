@@ -1,0 +1,1 @@
+#include <iostream>#include <algorithm>using namespace std;int main() {	int x, y, i, a;	while (cin >> x >> y) {		if (x > y)			swap(x, y);		for (i = x + 1; i < y; i++) {			a = i%5;			if (a == 2 || a == 3)				printf("%d\n", i);		}	}	return 0;}

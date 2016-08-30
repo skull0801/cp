@@ -1,0 +1,1 @@
+#include <iostream>using namespace std;int main() {	int x, f[3];	int a, g, d;	f[0] = f[1] = f[2] = 0;	while (cin >> x && x != 4) {		if (x >= 1 && x < 4) {			f[x-1]++;		}	}	printf("MUITO OBRIGADO\n");	printf("Alcool: %d\n", f[0]);	printf("Gasolina: %d\n", f[1]);	printf("Diesel: %d\n", f[2]);	return 0;}

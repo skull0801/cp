@@ -1,0 +1,1 @@
+#include <iostream>using namespace std;int main() {	int pass = 2002, i;	while (cin >> i) {		if (i == pass) {			cout << "Acesso Permitido\n";			break;		}		cout << "Senha Invalida\n";	}	return 0;}

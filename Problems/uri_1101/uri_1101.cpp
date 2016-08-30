@@ -1,0 +1,1 @@
+#include <iostream>#include <algorithm>using namespace std;int main() {	long long m, n, sum, i;	while (cin >> m >> n && m > 0 && n > 0) {		if (m > n)			swap (m, n);		sum = 0;		for (i = m; i <= n; i++) {			cout << i << " ";			sum += i;		}		cout << "Sum=" << sum << "\n";	}	return 0;}

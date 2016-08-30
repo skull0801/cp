@@ -1,0 +1,1 @@
+#include <iostream>#include <algorithm>using namespace std;int main() {	long long x, y, sum, i;	while (cin >> x >> y) {		sum = 0;		if (x > y)			swap(x, y);		for (i = x; i <= y; i++) {			if (i%13)				sum += i;		}		printf("%lld\n", sum);	}	return 0;}

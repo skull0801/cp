@@ -1,0 +1,1 @@
+#include <iostream>using namespace std;int main() {	int read = 0;	double g[2], x;	while (cin >> x && read < 2) {		if (x >= 0.0 && x <= 10.0) {			g[read++] = x;		} else {			cout << "nota invalida\n";		}	}	cout << "media = " << (g[0] + g[1])/2 << "\n";	return 0;}

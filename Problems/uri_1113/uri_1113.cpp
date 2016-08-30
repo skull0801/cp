@@ -1,0 +1,1 @@
+#include <iostream>using namespace std;int main() {	int x, y;	while (cin >> x >> y, x ^ y) {		if (x > y) {			cout << "Dec";		} else {			cout << "C";		}		cout << "rescente\n";	}	return 0;}

@@ -1,0 +1,1 @@
+#include <iostream>#include <algorithm>using namespace std;int main() {	int offset = 4;	int i, n;	while (cin >> n) {		for (i = 1; i <= n * offset; i++) {			if (i%offset)				printf("%d ", i);			else				printf("PUM\n");		}	}	return 0;}

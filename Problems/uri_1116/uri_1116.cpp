@@ -1,0 +1,1 @@
+#include <iostream>using namespace std;int main() {	int t, x, y;	while (cin >> t) {		while (t-- && cin >> x >> y) {			if (!y) {				cout << "divisao impossivel\n";				continue;			}			printf("%.1lf\n", (double)x/y);		}	}	return 0;}

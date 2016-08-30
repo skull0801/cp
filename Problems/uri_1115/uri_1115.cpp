@@ -1,0 +1,1 @@
+#include <iostream>using namespace std;int main() {	int x, y, i;	string quad[4] = {"primeiro", "segundo", "terceiro", "quarto"};	while (cin >> x >> y && x && y) {		if (x > 0) {			i = y > 0 ? 0 : 3;		} else {			i = y > 0 ? 1 : 2;		}		cout << quad[i] << "\n";	}	return 0;}
