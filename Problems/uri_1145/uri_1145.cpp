@@ -1,0 +1,1 @@
+#include <iostream>using namespace std;int main() {	int x, y, i, j;	while (cin >> x >> y) {		for (i = 1; i <= y; i += x) {			for (j = 0; j < x && i + j <= y; j++) {				if (j)					printf(" ");				printf("%d", i+j);			}			printf("\n");		}	}	return 0;}

@@ -1,0 +1,1 @@
+#include <iostream>using namespace std;int main() {	long long i, n, r1, r2;	while (cin >> n) {		for (i = 1; i <= n; i++) {			r1 = i * i;			r2 = r1 * i;			printf("%lld %lld %lld\n%lld %lld %lld\n", i, r1, r2, i, r1 + 1, r2 + 1);		}	}	return 0;}
