@@ -1,0 +1,1 @@
+#include <iostream>using namespace std;int main() {	double i;	double s = 0;	for (i = 1.0; i <= 100.0; i++) {		s += 1.0/i;	}	printf("%.2lf\n", s);	return 0;}

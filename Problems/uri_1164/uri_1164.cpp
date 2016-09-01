@@ -1,0 +1,1 @@
+#include <iostream>#include <cmath>using namespace std;int main() {	int t;	long long x, i, s;	while (scanf("%d", &t) == 1) {		while(t-- && scanf("%lld", &x) == 1) {			for (i = 1, s = 0; i < x; i++) {				if (x%i)					continue;				s+=i;			}			printf("%lld%s eh perfeito\n", x, s == x ? "" : " nao");		}	}	return 0;}

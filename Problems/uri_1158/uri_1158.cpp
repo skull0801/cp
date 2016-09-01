@@ -1,0 +1,1 @@
+#include <iostream>#include <cmath>using namespace std;int main() {	int t, x, y, i, s;	while (scanf("%d", &t) == 1) {		while(t-- && scanf("%d %d", &x, &y) == 2) {			x = x%2 ? x : x + 1;			for (i = x, s = 0; i < x + 2 * y; i+=2) {				s += i;			}			printf("%d\n", s);		}	}	return 0;}
