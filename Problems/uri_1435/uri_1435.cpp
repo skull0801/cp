@@ -1,0 +1,1 @@
+#include <iostream>using namespace std;int main() {	int n, i, j, a;	while (cin >> n && n) {		for (i = 0; i < n; i++) {			for (j = 0; j < n; j++) {				if (j)					printf(" ");				a = min(i + 1, n - i);				a = min(min(a, j + 1), n - j);				printf("%3d", a);			}			printf("\n");		}		printf("\n");	}	return 0;}
