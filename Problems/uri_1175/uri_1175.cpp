@@ -1,0 +1,1 @@
+#include <iostream>using namespace std;int main() {	int i, n, x[20], a;	n = 0;	while (n < 20 && cin >> (x[n]))		n++;	for (i = 0; i < n/2; i++) {		a = x[i];		x[i] = x[n-i-1];		x[n-i-1] = a;	}	for (i = 0; i < n; i++) {		printf("N[%d] = %d\n", i, x[i]);	}	return 0;}

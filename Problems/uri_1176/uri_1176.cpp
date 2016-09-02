@@ -1,0 +1,1 @@
+#include <iostream>using namespace std;#define N 61int main() {	unsigned long long fib[100], t;	int n = 2;	fib[0] = 0;	fib[1] = 1;	while (n < N) {		fib[n] = fib[n-1] + fib[n-2];		n++;	}	cin >> t;	while (t-- && cin >> n) {		// printf("%llu\n", fib[n]);		printf("Fib(%d) = %llu\n", n,  fib[n]);	}	return 0;}
