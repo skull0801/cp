@@ -1,0 +1,1 @@
+#include <iostream>using namespace std;int main() {	int a[150];	int n, x, i;	cin >> n;	i = 0;	while (i < n) {		cin >> a[i++];	}	x = 0;	for (i = 1; i < n; i++) {		if (a[i] < a[x]) {			x = i;		}		}	printf("%d\n", x + 1);	return 0;}

@@ -1,0 +1,1 @@
+#include <iostream>using namespace std;int main() {	int h, m, a, meet = 8 * 60;	while (scanf("%d:%d\n", &h, &m) == 2) {		a = max(0, (h * 60 + m + 60) - meet);		printf("Atraso maximo: %d\n", a);	}	return 0;}

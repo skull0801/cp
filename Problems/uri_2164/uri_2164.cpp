@@ -1,0 +1,1 @@
+#include <iostream>#include <cmath>using namespace std;int main() {	double sq5;	double n;	sq5 = sqrt(5);	while (cin >> n) {		printf("%.1lf\n", (pow((1+sq5)/2, n) - pow((1-sq5)/2, n))/sq5);	}	return 0;}

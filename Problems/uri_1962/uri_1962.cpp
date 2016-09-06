@@ -1,0 +1,1 @@
+#include <iostream>using namespace std;int main() {	long int t, n, r, s = 2015;	cin >> t;	while (t--) {		cin >> n;		r = s - n;		if (r > 0) {			printf("%ld D.C.\n", r);		} else {			printf("%ld A.C.\n", abs(r) + 1);		}	}	return 0;}

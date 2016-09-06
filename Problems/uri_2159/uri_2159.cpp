@@ -1,0 +1,1 @@
+#include <iostream>#include <cmath>using namespace std;int main() {	long n;	double dn;	while (cin >> n) {		dn = (double) n;		dn = dn/log(dn);		printf("%.1lf %.1lf\n", dn, dn * 1.25506);	}	return 0;}

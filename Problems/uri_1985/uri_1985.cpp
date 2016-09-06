@@ -1,0 +1,1 @@
+#include <iostream>using namespace std;int main() {	int t, i, q;	double to;	while (scanf("%d", &t) == 1) {		to = 0;		while (t-- && scanf("%d %d", &i, &q)) {			to += ((double) i - 1000 + 0.50) * (double) q;		}		printf("%.2lf\n", to);	}	return 0;}

@@ -1,0 +1,1 @@
+#include <iostream>using namespace std;bool m(int a, int b, int c) {	return a + b > c && b + c > a && a + c > b;}int main() {	int a, b, c, d;	while (cin >> a >> b >> c >> d) {		printf("%s\n", (m(a, b, c) || m(a, b, d) || m(a, c, d) || m(b, c, d)) ? "S" : "N");	}	return 0;}

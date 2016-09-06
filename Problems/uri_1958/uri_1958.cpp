@@ -1,0 +1,1 @@
+#include <iostream>#include <sstream>using namespace std;int main() {	long double a;	cout.precision(4);	while(cin >> a) {		cout << scientific << uppercase << showpos << a << endl;	}	return 0;}

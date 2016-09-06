@@ -1,0 +1,1 @@
+#include <iostream>using namespace std;int main() {	int t;	int x, y;	string a, b, a1, b1;	string r;	cin >> t;	while (t--) {		cin >> a >> a1 >> b >> b1;		cin >> x >> y;		r = (x + y)%2 ? "IMPAR" : "PAR";		cout << (r == a1 ? a : b) << endl;	}	return 0;}

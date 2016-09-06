@@ -1,0 +1,1 @@
+#include <iostream>using namespace std;int main() {	int a, b, c;	while (cin >> a >> b >> c) {		printf(":");		if ((a > b && c >= b) || (b > a && (c - b >= b - a)) || (a > b && b > c && (b - c < a - b)) || (a == b && c > b)) {			printf(")\n");		} else {			printf("(\n");		}	}	return 0;}

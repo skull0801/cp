@@ -1,0 +1,1 @@
+#include <iostream>using namespace std;int main() {	string a = "Life is not a problem to be solved";	int n, i;	cin >> n;	for (i = 0; i < n; i++) {		printf("%c", toupper(a[i]));	}	printf("\n");	return 0;}

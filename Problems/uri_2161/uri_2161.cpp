@@ -1,0 +1,1 @@
+#include <iostream>using namespace std;double f(int n) {	if (n < 1) {		return 0;	}	if (n == 1) {		return 1/6.0;	}	return 1.0/(6 + f(n-1));}int main() {	int n;	while (cin >> n) {		printf("%.10lf\n", 3 + f(n));	}	return 0;}

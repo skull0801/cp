@@ -1,0 +1,1 @@
+#include <iostream>using namespace std;int main() {	int s, t, f;	while (cin >> s >> t >> f) {		s += t;		if (s > 23) {			s -= 24;		}		s += f;		if (s > 23) {			s -= 24;		} else if (s < 0) {			s += 24;		}		printf("%d\n", s);	}	return 0;}

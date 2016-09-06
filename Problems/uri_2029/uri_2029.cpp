@@ -1,0 +1,1 @@
+#include <iostream>using namespace std;int main() {	// A = PI * (D/2)^2	// H = V/A	double a, b, h, ar;	while (cin >> a >> b) {		ar = 3.14 * (b/2) * (b/2);		h = a/ar;		printf("ALTURA = %.2lf\nAREA = %.2lf\n", h, ar);	}	return 0;}

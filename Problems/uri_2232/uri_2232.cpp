@@ -1,0 +1,1 @@
+#include <iostream>using namespace std;long nums[32];int main() {	int t, n, i;	long tot;	nums[0] = 1;	for (i = 1; i < 32; i++) {		nums[i] = (nums[i-1] + 1) * 2 - 1;	}	i = scanf("%d", &t);	while (t--) {		i = scanf("%d", &n);		printf("%ld\n", nums[n-1]);	}	return 0;}

@@ -1,0 +1,1 @@
+#include <iostream>using namespace std;int main() {	string s;	int d1, d2, d3, a;	a = 0;	while (getline(cin, s)) {		if (s == "caw caw") {			printf("%d\n", a);			a = 0;		} else {			d1 = s[0] == '*' ? 4 : 0;			d2 = s[1] == '*' ? 2 : 0;			d3 = s[2] == '*' ? 1 : 0;			a += d1 + d2 + d3;		}	}	return 0;}
