@@ -1,0 +1,1 @@
+#include <iostream>using namespace std;int main() {	string a;	int i, c;	while (cin >> a) {		i = -1;		c = 0;		do {			i = a.find("1", i + 1);			if (i != string::npos) {				c++;			}		} while (i != string::npos);		cout << a;		printf("%d\n", c%2);	}	return 0;}
