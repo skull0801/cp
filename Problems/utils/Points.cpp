@@ -7,7 +7,7 @@ public:
     double x, y;
 
     Point(double xv = 0, double yv = 0) : x(xv), y(yv) {}
-}
+};
 
 double distance(const Point& P, const Point& Q)
 {
