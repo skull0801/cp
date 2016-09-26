@@ -1,0 +1,85 @@
+#include <iostream>
+#include <cmath>
+
+#define PI 3.141592653589793
+#define EPS 1.0E-9
+
+using namespace std;
+
+class Point {
+public:
+    double x, y;
+
+    Point(double xv = 0, double yv = 0) : x(xv), y(yv) {}
+};
+
+double distance(const Point& P, const Point& Q)
+{
+    return hypot(P.x - Q.x, P.y - Q.y);
+}
+
+bool eq(double a, double b) {
+	return abs(a - b) < EPS;
+}
+
+bool pEquals(const Point& P, const Point& Q) {
+	return eq(P.x, Q.x) && eq(P.y, Q.y);
+}
+
+void translate(Point& P, double dx, double dy) {
+	P.x += dx;
+	P.y += dy;
+}
+
+void halfwayPoint(const Point& P, const Point& Q, Point& H)
+{
+	H.x = Q.x; H.y = Q.y;
+	translate(H, -P.x, -P.y);
+	H.x /= 2;
+	H.y /= 2;
+	translate(H, P.x, P.y);
+}
+
+Point ps[11000];
+
+int main() {
+	int t, n, n2, i, j, k, a, hits;
+	bool sim, isThereQ, can;
+	Point h, p;
+	Point psP[10000];
+	scanf("%d", &t);
+	while (t--) {
+		scanf("%d", &n);
+		scanf("%lf %lf", &(ps[0].x), &(ps[0].y));
+		can = n % 2 == 0;
+		for (i = 1; i < n; i++) {
+			scanf("%lf %lf", &(ps[i].x), &(ps[i].y));
+			if (can) {
+				halfwayPoint(ps[0], ps[i], psP[i-1]);
+			}
+		}
+		sim = false;
+		if (can) {
+			if (n == 2) {
+				sim = true;
+			} else {
+				for (i = 0; i < n - 1 && !sim; i++) { // for each possible point of simmetry
+					sim = false;
+					hits = 1;
+					for (j = 1; j < n; j++) { // for each point p (except the first one)
+						for (k = j + 1; k < n; k++) { // for each point q (starting at p, so as to not reflect)
+							halfwayPoint(ps[j], ps[k], h);
+							if (pEquals(h, psP[i])) {
+								hits++;
+								break;
+							}
+						}
+					}
+					sim = hits == n/2;
+				}
+			}
+		}
+		printf("%s\n", sim ? "yes" : "no");
+	}
+	return 0;
+}
